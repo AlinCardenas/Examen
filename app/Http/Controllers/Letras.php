@@ -8,8 +8,9 @@ use Illuminate\Http\Request;
 class Letras extends Controller
 {
     public function index(){
-        $palabra=  Content::all('word');
-        return view('index');
+        $palabra=  Content::first();
+        // dd($palabra->word);
+         return view('index', compact("palabra"));
     }
 
 }

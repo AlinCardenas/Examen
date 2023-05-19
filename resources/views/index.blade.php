@@ -1,8 +1,5 @@
 <x-guest-layout>
     <div>
-        <div>
-            hola
-        </div>
     </div>
-    <h1>Hola</h1>
+    <h1 class="text-white">{{ $palabra->word }}</h1>
 </x-guest-layout>

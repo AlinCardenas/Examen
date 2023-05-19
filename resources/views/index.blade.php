@@ -8,8 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-{{ $palabra->word }}
-
-{{$letra}}
+    @php
+    // Esto separa la letra especifica
+        $letra = str_replace('DR5', '', $palabra->word);
+    @endphp
+    <p>Letra 1:</p>
+    {{ $letra }}
 </body>
 </html>

@@ -14,5 +14,10 @@
     @endphp
     <p>Letra 1:</p>
     {{ $letra }}
+    {{$letras = str_split($palabra);}}
+    {{$letra1 = $letras[0];}}
+{{$letra2 = $letras[1];}}
+{{$letra3 = $letras[2];}}
+{{$letra4 = $letras[3];}}
 </body>
 </html>

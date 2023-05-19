@@ -10,7 +10,9 @@ class Letras extends Controller
     public function index(){
         $palabra=  Content::first();
         // dd($palabra->word);
-         return view('index', compact("palabra"));
+         $letra= strtr($palabreqa); 
+        
+        return view('index', compact("palabra"));
     }
 
 }

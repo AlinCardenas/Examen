@@ -19,9 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/letra',[Letras::class, 'index']);
 
-Route::get('/dashboard', function () {
+Route::get('/dashboard', function (){
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
@@ -29,6 +28,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+Route::controller(Letras::class)->group(function () {
+    Route::get('/letra/uno','uno' )->name('letras.uno');
+    Route::get('/letra/dos','dos')->name('letras.dos');
+    Route::get('/letra/tres', 'tres')->name('letras.tres');
+    Route::get('/letra/cuatro', 'cuatro')->name('letras.cuatro');
 });
 
 require __DIR__.'/auth.php';

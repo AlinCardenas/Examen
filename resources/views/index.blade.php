@@ -9,5 +9,7 @@
 </head>
 <body>
 {{ $palabra->word }}
+
+{{$letra}}
 </body>
 </html>

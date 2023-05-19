@@ -1,7 +1,10 @@
 <x-guest-layout>
     <div>
-        <div>
+        <div class="text-white">
             hola
+            palabra
+            palabra->
+
         </div>
     </div>
     <h1>Hola</h1>

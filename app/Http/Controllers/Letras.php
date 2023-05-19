@@ -9,6 +9,7 @@ class Letras extends Controller
 {
     public function index(){
         $palabra=  Content::all('word');
+        
         return view('index');
     }
 
